@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfume Paradise - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Main CSS (includes @import for normalize.css, design-system.css, etc.) -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Navigation will be injected by loadNav.js -->
+    <div id="mainContent"></div>
+
+    <section class="content">
+        <main>
+            <h1>
+                Sculpting Dreams in a Bottle
+                <span class="mainRed font2">VERSACE EROS FLAME</span>
+                of Perfumery
+            </h1>
+            <p class="mainGray">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ad, sed quas,
+                sint minus, provident nihil atque exercitationem reprehenderit culpa
+                quasi illo ullam explicabo dolore possimus repellendus nisi fuga. Quod.
+            </p>
+            <div class="view-products">
+                <i class="fa-solid fa-arrow-right"></i>
+                <p class="mainGray">View All Products</p>
+            </div>
+        </main>
+        <aside>
+            <div class="eros">
+                <img src="assets/images/eros.png" alt="Eros Flame Bottle" />
+            </div>
+        </aside>
+    </section>
+
+    <section class="featured">
+        <h1>Featured Items</h1>
+        <div id="products-grid"></div>
+    </section>
+
+    <section class="featured-item">
+        <div class="text">
+            <div class="content">
+                <h2 class="font2 italic normal mainRed">VERSACE</h2>
+                <p>
+                    Versace, the epitome of Italian luxury, has long been synonymous with
+                    bold fashion and opulent designs. Founded in 1978 by Gianni Versace,
+                    the brand effortlessly blends classical art inspirations with contemporary
+                    glamour...
+                </p>
+            </div>
+            <div class="content">
+                <h2 class="font2 italic normal mainRed">PERFUME</h2>
+                <p>
+                    Perfume, a timeless art of self-expression, has captivated humanity for
+                    centuries. It evokes memories, enhances moods, and becomes an invisible
+                    signature of one’s identity...
+                </p>
+            </div>
+            <div class="content">
+                <h2 class="font2 italic normal mainRed">EROS</h2>
+                <p>
+                    Beyond its intoxicating scent, Eros represents empowerment and sensuality.
+                    The fragrance’s striking turquoise bottle adorned with Medusa symbolizes
+                    timeless allure and strength...
+                </p>
+            </div>
+        </div>
+        <div class="eros">
+            <img src="assets/images/eros.png" alt="Versace Eros" />
+        </div>
+        <div class="text">
+            <div class="content">
+                <h2 class="font2 italic normal mainRed">EROS</h2>
+                <p>
+                    Eros, inspired by the Greek god of love, embodies desire, strength, and
+                    passion. This fragrance line by Versace captures the essence of attraction,
+                    making it a perfect choice for those seeking a bold...
+                </p>
+            </div>
+            <div class="content">
+                <h2 class="font2 italic normal mainRed">PERFUME</h2>
+                <p>
+                    From floral and fruity to woody and spicy, perfumes offer a spectrum of
+                    scents that cater to every personality and occasion. More than just a
+                    fragrance, perfume is a statement...
+                </p>
+            </div>
+            <div class="content">
+                <h2 class="font2 italic normal mainRed">VERSACE</h2>
+                <p>
+                    From clothing to fragrances, Versace offers a sensory experience that exudes
+                    confidence and elegance. The brand's designs cater to those who dare to
+                    stand out, making bold statements...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be injected by loadFooter.js -->
+
+    <!-- ========== Scripts ========== -->
+    <!-- Load jQuery once -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Font Awesome (for icons) -->
+
+    <!-- Load Navigation Script (injects nav) -->
+    <script src="js/loadNav.js" defer></script>
+
+    <!-- Load Footer Script (injects footer) -->
+    <script src="js/loadFooter.js" defer></script>
+
+    <!-- Cart Icon Logic -->
+    <script src="js/cart-icon.js" defer></script>
+
+    <!-- Main script for index (fetch & display featured products) -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

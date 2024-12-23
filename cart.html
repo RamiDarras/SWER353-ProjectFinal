@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Perfume Paradise</title>
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Toastr CSS for Toast Notifications -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+  />
+
+  <!-- SweetAlert2 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+  />
+</head>
+<body>
+
+  <div id="main-content">
+    <main>
+      <section class="cart-section">
+        <h2>Your Shopping Cart</h2>
+        <div class="container">
+          <div id="cart-container">
+            <!-- Cart Items Will Be Injected By cart.js -->
+          </div>
+          <div class="cart-summary">
+            <h3>Summary Order</h3>
+            <div class="total">
+              <h3>Total</h3>
+              <h3>: <span id="cart-total">0.00</span>$</h3>
+            </div>
+            <div class="br"></div>
+            <input type="text" class="discount" placeholder="Add Discount Code" />
+            <button id="checkout-button" class="btn">Checkout</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div id="confirm-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="confirm-title">
+    <div class="modal-content">
+      <span class="close-button" aria-label="Close Modal">&times;</span>
+      <h3 id="confirm-title">Confirm Removal</h3>
+      <p id="confirm-message">Are you sure you want to remove this item from your cart?</p>
+      <div class="modal-buttons">
+        <button id="confirm-remove" class="confirm-button">Remove</button>
+        <button id="cancel-remove" class="cancel-button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer injected by loadFooter.js -->
+
+  <!-- ========== Scripts ========== -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Navigation & Footer -->
+  <script src="js/loadNav.js" defer></script>
+  <script src="js/loadFooter.js" defer></script>
+
+  <!-- Toastr & SweetAlert2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+  <!-- Cart Icon & Cart Logic -->
+  <script src="js/cart-icon.js" defer></script>
+  <script src="js/cart.js" defer></script>
+
+  <!-- Toastr Configuration -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      toastr.options = {
+        closeButton: true,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "3000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+      };
+    });
+  </script>
+</body>
+</html>

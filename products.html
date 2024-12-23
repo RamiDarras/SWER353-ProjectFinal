@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Perfumes - Perfume Paradise</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Toastr CSS for Notifications -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+</head>
+
+<body>
+
+  <div id="mainContent"></div>
+  <!-- Search Bar -->
+
+
+  <!-- Products Section -->
+  <main class="products-main">
+    <div class="search-container">
+      <div class="search-wrapper">
+        <input type="text" class="search-bar" placeholder="Search..." />
+        <div class="search-icon">
+          <!-- Font Awesome icon -->
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+    <section class="products-section">
+
+      <h2>Our Perfume Collection</h2>
+      <div class="container">
+        <div id="products-container" class="perfume-grid">
+          <!-- Dynamically loaded by product.js -->
+        </div>
+      </div>
+    </section>
+    <!-- Overlay Structure -->
+    <div id="perfume-overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <span class="close-button">&times;</span>
+        <img src="" alt="" id="overlay-image" />
+        <div class="perfumeName bold">
+          <h3 class="s bold" id="overlay-name"></h3>
+        </div>
+        <div class="details italic normal">
+          <p id="overlay-description"></p>
+          <div class="bottom">
+            <p class="mainRed font2 l bold" id="overlay-price"></p>
+            <div class="add" id="overlay-add" data-pic="" data-name="" data-price="">
+              <button class="add-to-cart"><span>Add to Cart</span></button>
+              <!-- <i class="fa-solid fa-plus"></i> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer injected by loadFooter.js -->
+
+  <!-- ========== Scripts ========== -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Navigation & Footer -->
+  <script src="js/loadNav.js" defer></script>
+  <script src="js/loadFooter.js" defer></script>
+
+  <!-- Toastr JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
+
+  <!-- Cart Icon Script -->
+  <script src="js/cart-icon.js" defer></script>
+
+  <!-- Product Logic (loading, searching, adding to cart) -->
+  <script src="js/product.js" defer></script>
+
+  <!-- Optional Toastr config here -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      toastr.options = {
+        closeButton: true,
+        debug: false,
+        newestOnTop: false,
+        progressBar: true,
+        positionClass: "toast-bottom-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "3000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+      };
+    });
+  </script>
+</body>
+
+</html>
