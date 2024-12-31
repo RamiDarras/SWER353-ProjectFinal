@@ -139,7 +139,7 @@ $(document).ready(function () {
    }
   });
  }
-
+ var globalName = "";
  // Display products in the container
  function displayProducts(perfumes) {
   const container = $("#products-container");
@@ -249,7 +249,7 @@ $(document).ready(function () {
   const overlayName = $("#overlay-name");
   const overlayDescription = $("#overlay-description");
   const overlayPrice = $("#overlay-price");
-  const overlayAdd = $("#overlay-add");
+  let overlayAdd = $("#overlay-add");
   const closeButton = $(".close-button");
 
   // Function to show overlay
@@ -273,7 +273,6 @@ $(document).ready(function () {
    overlayAdd.attr("data-pic", dataPic);
    overlayAdd.attr("data-name", dataName);
    overlayAdd.attr("data-price", dataPrice);
-
    // Show the overlay
    overlay.removeClass("hidden").addClass("visible");
 
@@ -308,10 +307,9 @@ $(document).ready(function () {
   // Bind click event to add button in the overlay
   overlayAdd.on("click", function (event) {
    event.stopPropagation(); // Prevent overlay click event
-   const perfumePic = $(this).data("pic");
-   const perfumeName = $(this).data("name");
-   const perfumePrice = parseFloat($(this).data("price"));
-
+   const perfumePic = $(this).attr("data-pic");
+   const perfumeName = $(this).attr("data-name");
+   const perfumePrice = parseFloat($(this).attr("data-price"));
    const perfumeDetails = {
     image: perfumePic,
     name: perfumeName,
